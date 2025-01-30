@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korean Pop Adicts</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">INICIO</a></li>
+            <li><a href="#noticias.html">NOTICIAS</a></li>
+            <li><a href="#artistas.html">ARTISTAS</a></li>
+            <li><a href="#videos.html">VIDEOS MUSICALES</a></li>
+            <li><a href="#nosotros.html">NOSOTROS</a></li>
+        </ul>
+        <br>
+        
+        <ul class="nav-click">
+            <li><a href="#" class="btn-login">INICIAR SESIÓN</a></li>
+           
+            <li><a href="#" class="btn-register">REGISTRARTE</a></li>
+        </ul>
+    </nav>
+    <script>
+        // Seleccionamos todos los enlaces del navbar
+        const navLinks = document.querySelectorAll(".nav-links a");
+
+        // Agregamos un evento de clic a cada enlace
+        navLinks.forEach(link => {
+            link.addEventListener("click", function() {
+                // Removemos la clase 'active' de todos los enlaces
+                navLinks.forEach(link => link.classList.remove("active"));
+                // Agregamos la clase 'active' al enlace que se ha clicado
+                this.classList.add("active");
+            });
+        });
+    </script>
+</body>
+</html>
